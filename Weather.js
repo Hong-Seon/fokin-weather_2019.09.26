@@ -11,7 +11,19 @@ export default function Weahter({ temp }) {
 }
 
 Weahter.propTypes = {
-    temp: PropTypes.number.isRequired
+    temp: PropTypes.number.isRequired,
+    condition: PropTypes.oneOf([
+        "Thunderstorm",
+        "Drizzle",
+        "Rain",
+        "Snow",
+        "Atmosphere",
+        "Clear",
+        "Clouds",
+        "Haze",
+        "Mist",
+        "Dust"
+    ]).isRequired
 };
 
 const styles = StyleSheet.create({
